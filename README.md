@@ -18,6 +18,11 @@ only when asked. It can run once (cron, CI) or loop forever.
 > Implement a Go or Python tool that continuously reconciles desired DNS
 > records (Route 53 / Azure DNS) from a Git repository (GitOps for DNS).
 
+Why it matters: DNS changes made in the console have no review and no
+history, and a wrong record can take a service offline. Keeping records in
+Git means every change is reviewed, and the reconciler puts back anything
+edited by hand.
+
 ## How it works
 
 ```mermaid
